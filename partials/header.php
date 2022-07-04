@@ -31,7 +31,7 @@
 
           <ul>
 
-            <li><a href="ajout.php">Utilisateur</a></li>
+            <li><a href="ajouter.php">Utilisateur</a></li>
             <li><a href="#">Liste Utilisateur</a></li>
           
           </ul>
