@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espace Administrateur</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
+    
     <style>
 
        .text
@@ -215,7 +217,7 @@
 ?>
 
 
-            <table class="table table-white">
+            <table id="datatableid" class="table table-white">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -265,7 +267,30 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js" integrity="sha512-BmM0/BQlqh02wuK5Gz9yrbe7VyIVwOzD1o40yi1IsTjriX/NGF37NyXHfmFzIlMmoSIBXgqDiG1VNU6kB5dBbA==" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
 
+
+<script>
+
+        $(document).ready(function () {
+
+             $('#datatableid').DataTable({
+               "pagingType": "full_numbers",
+              "lenghtMenu": [
+                [10, 25, 50, -1],
+                 [10, 25, 50, "All"]
+               ],
+               responsive: true,
+               language: {
+                 search: "_INPUT_",
+                 searchPlaceholder:"Rechercher utilisateur",
+               }
+             });
+
+        });
+
+</script>
 
 <script>
   $(document).ready(function() {
